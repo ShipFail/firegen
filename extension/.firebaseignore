@@ -1,0 +1,24 @@
+# Do not publish development files
+**/*.md
+**/test**
+**/*.test.*
+**/*.spec.*
+**/integration/**
+**/.devcontainer/**
+**/.github/**
+**/scripts/**
+**/docs/**
+**/AGENTS.md
+**/ARCHITECTURE.md
+**/LLMS.md
+**/VEO-*
+**/GEMINI.md
+**/*.webp
+**/*.png
+**/*.jpg
+**/*.mp4
+
+# Ignore non-runtime TS
+functions/src/**/*.test.*
+functions/src/**/fixtures/**
+functions/src/**/scripts/**
