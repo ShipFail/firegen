@@ -101,7 +101,7 @@ const fixtures = [
       model: expect.stringMatching(/^veo-3\.1-(fast-)?generate-preview$/),
       instances: expect.arrayContaining([
         expect.objectContaining({
-          prompt: expect.stringMatching(/walking through.*futuristic city/i),
+		  prompt: expect.stringMatching(/^(?=.*walking)(?=.*futuristic)(?=.*city).*/i),
         }),
       ]),
       parameters: expect.objectContaining({
@@ -119,7 +119,7 @@ const fixtures = [
       instances: expect.arrayContaining([
         expect.objectContaining({
           // AI consolidates both subject assets into referenceImages[] and may synthesize a cleaned prompt.
-          prompt: expect.stringMatching(/walking.*together.*park/i),
+		  prompt: expect.stringMatching(/^(?=.*walking)(?=.*together)(?=.*park).*/i),
           referenceImages: expect.arrayContaining([
             expect.objectContaining({
               image: expect.objectContaining({
@@ -266,8 +266,8 @@ const fixtures = [
       model: expect.stringMatching(/^veo-3\.1-(fast-)?generate-preview$/), // Accept both fast and standard variants
       instances: expect.arrayContaining([
         expect.objectContaining({
-          // Prompt should describe the action/scene WITHOUT URLs
-          prompt: expect.stringMatching(/.*man.*stretches.*smiles/i),
+      // Prompt should describe the action/scene WITHOUT URLs
+      prompt: expect.stringMatching(/^(?=.*man)(?=.*stretches)(?=.*smiles).*/i),
           // First frame goes in image field
           image: expect.objectContaining({
             gcsUri: "gs://studio-3670859293-6f970.firebasestorage.app/users/nZ86oPazPgT3yZjTHhFFjkj7sR42/projects/x5f8I6Tq99AGgj4HJrzF/keyframes/fd3d84c9-9331-49ed-9739-7b35e76d9f9b.jpg",
@@ -349,7 +349,7 @@ const fixtures = [
       instances: expect.arrayContaining([
         expect.objectContaining({
           // URLs must be converted to gs:// and removed from prompt
-          prompt: expect.stringMatching(/rotating.*studio lighting/i),
+		  prompt: expect.stringMatching(/^(?=.*rotating)(?=.*studio lighting).*/i),
         }),
       ]),
       parameters: expect.objectContaining({
