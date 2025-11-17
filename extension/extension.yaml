@@ -13,7 +13,7 @@
 # limitations under the License.
 
 name: firegen
-version: 0.2.4
+version: 0.2.5
 specVersion: v1beta
 
 displayName: FireGen – turns RTDB into your universal Generative AI API
@@ -80,7 +80,7 @@ resources:
       Routes jobs to appropriate model adapters and manages async operations for video generation.
     properties:
       buildConfig:
-        runtime: nodejs22
+        runtime: nodejs20
       serviceConfig:
         availableMemory: 512M
         timeoutSeconds: 540
@@ -99,7 +99,7 @@ resources:
       Task Queue trigger for polling async video generation operations.
       Checks Vertex AI operation status, handles retries, and updates job status in Realtime Database.
     properties:
-      runtime: nodejs22
+      runtime: nodejs20
       taskQueueTrigger: {}
 
 # No configurable parameters - extension uses hard-coded values:
