@@ -113,13 +113,13 @@ const fixtures = [
   },
   {
     id: "video:veo31-two-subjects",
-    prompt: "Create a video featuring https://storage.googleapis.com/example/person1.jpg and https://storage.googleapis.com/example/person2.png walking together in a park",
+    prompt: "Create a video featuring/referencing https://storage.googleapis.com/example/person1.jpg and https://storage.googleapis.com/example/person2.png walking together in a park",
     expected: {
       model: expect.stringMatching(/^veo-3\.1-(fast-)?generate-preview$/),
       instances: expect.arrayContaining([
         expect.objectContaining({
           // AI consolidates both subject assets into referenceImages[] and may synthesize a cleaned prompt.
-		  prompt: expect.stringMatching(/^(?=.*walking)(?=.*together)(?=.*park).*/i),
+		      prompt: expect.stringMatching(/^(?=.*walking)(?=.*together)(?=.*park).*/i),
           referenceImages: expect.arrayContaining([
             expect.objectContaining({
               image: expect.objectContaining({
