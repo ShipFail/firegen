@@ -1,5 +1,7 @@
 # FireGen - AI Media Generation Extension
 
+FireGen is the one extension that routes prompts to every frontier model from Firebase.
+
 <p align="center"><img src="./docs/firegen-logo.webp" width="256" alt="FireGen Logo" /></p>
 
 > **Turn Firebase RTDB into your universal Generative AI API.**
