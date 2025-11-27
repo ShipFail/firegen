@@ -12,7 +12,7 @@
 
     // Node Feature (Spec v1-compliant), replaces node + npm-package
     "ghcr.io/devcontainers/features/node:1": {
-      "version": "22"
+      "version": "lts"
     },
 
     // Java 17 for Firebase Emulator Suite

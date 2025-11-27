@@ -24,7 +24,7 @@
     "debug:text": "npm run build && node lib/assisted-mode/debug-reasoning.js"
   },
   "engines": {
-    "node": "22"
+    "node": "lts"
   },
   "main": "lib/index.js",
   "dependencies": {
