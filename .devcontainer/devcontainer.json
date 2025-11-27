@@ -18,7 +18,12 @@
     // Java 17 for Firebase Emulator Suite
     "ghcr.io/devcontainers/features/java:1": {
       "version": "17"
+    },
+
+    "ghcr.io/devcontainers/features/sshd:1": {
+        "version": "latest"
     }
+
   },
 
   "onCreateCommand": "git config --global pull.rebase true && npm install -g firebase-tools npm-check-updates",
