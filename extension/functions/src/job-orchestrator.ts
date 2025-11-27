@@ -9,7 +9,7 @@ import {generateSignedUrl} from "./storage.js";
 import {enqueuePollTask} from "./poller.js";
 import {assistedRequest} from "./assisted-mode/index.js";
 import {getModelAdapter, isValidModelId} from "./models/index.js";
-import {getFireGenVersion} from "./version.js";
+import {FIREGEN_VERSION} from "./version.js";
 import {serializeError} from "./lib/error-utils.js";
 import type {JobNode, FileInfo} from "./types/index.js";
 
@@ -177,7 +177,7 @@ export async function analyzeAndTransformJob(
         reasons: analyzed.reasons,        // AI reasoning chain
       },
       metadata: {
-        version: getFireGenVersion(),
+        version: FIREGEN_VERSION,
         createdAt: now,
         updatedAt: now,
         // Polling metadata (will be set when job starts)
@@ -230,7 +230,7 @@ export async function analyzeAndTransformJob(
         reasons: [],                     // Empty array for consistency
       },
       metadata: {
-        version: getFireGenVersion(),
+        version: FIREGEN_VERSION,
         createdAt: now,
         updatedAt: now,
       },

@@ -3,8 +3,10 @@ import {describe, test, expect} from "vitest";
 import {readFileSync} from "fs";
 import {resolve} from "path";
 
+import {FIREGEN_VERSION} from "../src/version.js";
+
 describe("Version Consistency", () => {
-  test("extension.yaml and package.json must have the same version", () => {
+  test("extension.yaml, package.json, and src/version.ts must have the same version", () => {
     // Read extension.yaml
     const extensionYamlPath = resolve(__dirname, "../../extension.yaml");
     const extensionYamlContent = readFileSync(extensionYamlPath, "utf-8");
@@ -19,13 +21,16 @@ describe("Version Consistency", () => {
     const packageJsonPath = resolve(__dirname, "../package.json");
     const packageJsonContent = readFileSync(packageJsonPath, "utf-8");
     const packageJson = JSON.parse(packageJsonContent);
-    const packageVersion = packageJson.version;
+    const packageVersion = packageJson.version as string;
 
-    // Assert they match
+    // Assert all three match
     expect(extensionVersion).toBe(packageVersion);
+    expect(extensionVersion).toBe(FIREGEN_VERSION);
 
-    // Additional check: both should be valid semver format
-    expect(extensionVersion).toMatch(/^\d+\.\d+\.\d+$/);
-    expect(packageVersion).toMatch(/^\d+\.\d+\.\d+$/);
+    // Additional check: all should be valid semver format
+    const semverRegex = /^\d+\.\d+\.\d+$/;
+    expect(extensionVersion).toMatch(semverRegex);
+    expect(packageVersion).toMatch(semverRegex);
+    expect(FIREGEN_VERSION).toMatch(semverRegex);
   });
 });

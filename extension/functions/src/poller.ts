@@ -4,7 +4,7 @@ import {getFunctions} from "firebase-admin/functions";
 import * as logger from "firebase-functions/logger";
 
 import {JOB_TTL_MS, POLL_INTERVAL_MS} from "./config.js";
-import {getFireGenVersion} from "./version.js";
+import {FIREGEN_VERSION} from "./version.js";
 import type {JobNode} from "./types/index.js";
 
 /**
@@ -68,7 +68,7 @@ export function initializeJobMetadata(): {
 } {
   const now = Date.now();
   return {
-    version: getFireGenVersion(),
+    version: FIREGEN_VERSION,
     createdAt: now,
     updatedAt: now,
     ttl: now + JOB_TTL_MS,
