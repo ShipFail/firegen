@@ -20,9 +20,6 @@
     "test:audio": "vitest run assisted-mode -- -t \"audio:\"",
     "test:text": "vitest run assisted-mode -- -t \"text:\""
   },
-  "engines": {
-    "node": "20"
-  },
   "main": "lib/index.js",
   "dependencies": {
     "@eslint/js": "^9.17.0",
