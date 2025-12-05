@@ -5,6 +5,23 @@ All notable changes to the FireGen Extension will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.0] - 2025-12-05
+
+### Added
+- **MIME-aware URL pipeline**: Assisted-mode now tags URLs with MIME type (e.g., `<FIREGEN_IMAGE_JPEG_URI_1/>`) and restores `mimeType` onto media objects for downstream adapters.
+- **Gemini Flash Image guidance**: Expanded Zod schema and AI hints to document multimodal `fileData` parts, safety settings, and REST endpoint parity; clarifies reference-image usage.
+- **Assisted-mode fixtures**: New Veo 3.1 image-to-video and multi-subject fixtures to guard analyzer output and reference handling.
+
+### Changed
+- **Runtime target**: Extension functions run on `nodejs20` for Firebase Extensions compatibility; TypeScript/Vitest moved to dependencies and `npm run upload` added for `firebase ext:dev:upload`.
+- **Signed URL lifetime**: Expiry set to 24 hours (previously 25h) to match documented download window.
+- **Storage bucket resolution**: Falls back to `${PROJECT_ID}.firebasestorage.app` instead of requiring `gcloud` CLI.
+- **Version metadata**: Job records now write the static `FIREGEN_VERSION` constant directly.
+
+### Fixed
+- **Extension packaging**: Removed generate-version prebuild step and engines pin that blocked extension uploads.
+- **Media restoration**: URL restoration now reattaches MIME types to media/file objects, avoiding downstream MIME mismatches.
+
 ## [0.2.0] - 2025-10-27
 
 ### Added
