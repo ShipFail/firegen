@@ -7,5 +7,5 @@
  * - extension/functions/package.json "version"
  * - extension/extension.yaml "version"
  */
-export const FIREGEN_VERSION = "0.2.6";
+export const FIREGEN_VERSION = "0.3.0";
 
