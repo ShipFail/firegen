@@ -1,8 +1,16 @@
 {
   "$schema": "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainer.schema.json",
 
-  "name": "FireGen Dev Environment",
+  "name": "Ship.Fail Devcontainer Environment",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+
+  "mounts": [
+    // other mounts you might already have...
+
+    // Mount your host ~/.gitconfig into the container home.
+    // For Linux/macOS host:
+    "source=${localEnv:HOME}/.gitconfig,target=/home/vscode/.gitconfig,type=bind,consistency=cached"
+  ],
 
   "features": {
     // Google Cloud CLI Feature (3rd-party allowed)
@@ -26,7 +34,7 @@
 
   },
 
-  "onCreateCommand": "git config --global pull.rebase true && npm install -g firebase-tools npm-check-updates",
+  "onCreateCommand": "npm install -g firebase-tools npm-check-updates @google/gemini-cli @anthropic-ai/claude-code @openai/codex @github/copilot",
   // Run after container is created and features are applied
   "postCreateCommand": "cd extension/functions && npm install --no-fund --no-audit",
 }
