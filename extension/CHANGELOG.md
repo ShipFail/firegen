@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.3.1] - 2025-12-16
 
 ### Added
-- **Icon**: Add Icon PNG
+- **Icon**: Added extension icon (512x512 PNG)
 - **MIME-aware URL pipeline**: Assisted-mode now tags URLs with MIME type (e.g., `<FIREGEN_IMAGE_JPEG_URI_1/>`) and restores `mimeType` onto media objects for downstream adapters.
 - **Gemini Flash Image guidance**: Expanded Zod schema and AI hints to document multimodal `fileData` parts, safety settings, and REST endpoint parity; clarifies reference-image usage.
 - **Assisted-mode fixtures**: New Veo 3.1 image-to-video and multi-subject fixtures to guard analyzer output and reference handling.
