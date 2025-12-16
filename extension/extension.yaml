@@ -15,6 +15,7 @@
 name: firegen
 version: 0.3.0
 specVersion: v1beta
+icon: icon.png
 
 displayName: FireGen – turns RTDB into your universal Generative AI API
 description: >
