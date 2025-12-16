@@ -1,45 +1,62 @@
 {
   "$schema": "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainer.schema.json",
 
-  "name": "Ship.Fail Devcontainer Environment",
+  "name": "🔥🎞️ FireGen | Ship.Fail",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
 
+  "initializeCommand": "mkdir -p '${localEnv:HOME}/.claude' '${localEnv:HOME}/.codex' '${localEnv:HOME}/.gemini' && touch '${localEnv:HOME}/.claude.json' '${localEnv:HOME}/.gitconfig'",
+  
   "mounts": [
-    // other mounts you might already have...
-
-    // Mount your host ~/.gitconfig into the container home.
-    // For Linux/macOS host:
+    "source=${localEnv:HOME}/.claude,target=/home/vscode/.claude,type=bind,consistency=cached",
+    "source=${localEnv:HOME}/.claude.json,target=/home/vscode/.claude.json,type=bind,consistency=cached",
+    "source=${localEnv:HOME}/.codex,target=/home/vscode/.codex,type=bind,consistency=cached",
+    "source=${localEnv:HOME}/.gemini,target=/home/vscode/.gemini,type=bind,consistency=cached",
     "source=${localEnv:HOME}/.gitconfig,target=/home/vscode/.gitconfig,type=bind,consistency=cached"
   ],
 
   "features": {
-    // Google Cloud CLI Feature (3rd-party allowed)
-    "ghcr.io/dhoeric/features/google-cloud-cli:1.0.1": {
-      "version": "latest"
-    },
+    "ghcr.io/devcontainers/features/sshd:1":            { "version": "latest" },
+    "ghcr.io/devcontainers-community/features/deno:1":  { "version": "latest" },   
+    "ghcr.io/devcontainers/features/ruby:1":            { "version": "latest" },
+    "ghcr.io/dhoeric/features/google-cloud-cli:1.0.1":  { "version": "latest" },
+    "ghcr.io/devcontainers/features/node:1":            { "version": "lts" },
+    "ghcr.io/devcontainers/features/java:1":            { "version": "17" },
 
-    // Node Feature (Spec v1-compliant), replaces node + npm-package
-    "ghcr.io/devcontainers/features/node:1": {
-      "version": "lts"
-    },
+    "ghcr.io/devcontainers/features/common-utils:2":    {},
+    "ghcr.io/devcontainers/features/github-cli:1":      {},
+    
+    "./features/gh-auto-auth": {},
 
-    // Java 17 for Firebase Emulator Suite
-    "ghcr.io/devcontainers/features/java:1": {
-      "version": "17"
-    },
-
-    // Deno runtime
-    "ghcr.io/denoland/devcontainer-features/deno:1": {
-      "version": "latest"
-    },
-
-    "ghcr.io/devcontainers/features/sshd:1": {
-        "version": "latest"
+    "./features/any-packages": {
+      "packages": [
+        "ffmpeg",
+        "imagemagick",
+        "libvips",
+        "webp",
+        "pandoc",
+        "texlive-xetex",
+        "texlive-latex-recommended",
+        "texlive-fonts-recommended",
+        "npm:tsx",
+        "npm:firebase-tools",
+        "npm:npm-check-updates",
+        "npm:@google/gemini-cli",
+        "npm:@anthropic-ai/claude-code",
+        "npm:@openai/codex",
+        "npm:@github/copilot"
+      ]
     }
-
   },
 
-  "onCreateCommand": "npm install -g firebase-tools npm-check-updates @google/gemini-cli @anthropic-ai/claude-code @openai/codex @github/copilot",
-  // Run after container is created and features are applied
-  "postCreateCommand": "cd extension/functions && npm install --no-fund --no-audit"
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "denoland.vscode-deno"
+      ]
+    }
+  },
+
+  "onCreateCommand": "true",
+  // `post` means after mounting `workspace`
+  "postCreateCommand": "true"
 }
