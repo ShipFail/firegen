@@ -106,6 +106,7 @@ resources:
 
 externalServices:
   - name: Vertex AI REST API
+    pricingUri: https://cloud.google.com/vertex-ai/pricing
     url: https://{REGION}-aiplatform.googleapis.com/v1beta1/
 
 # No configurable parameters - extension uses hard-coded values:
