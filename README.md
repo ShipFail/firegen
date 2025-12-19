@@ -9,7 +9,7 @@ FireGen is the one extension that routes prompts to every frontier model from Fi
 [![Firebase](https://img.shields.io/badge/Firebase-Cloud%20Functions-orange)](https://firebase.google.com/docs/functions)
 [![Vertex AI](https://img.shields.io/badge/Vertex%20AI-Powered-blue)](https://cloud.google.com/vertex-ai)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue)](https://www.typescriptlang.org/)
-[![Node.js](https://img.shields.io/badge/Node.js-22-green)](https://nodejs.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-20-green)](https://nodejs.org/)
 [![REST API](https://img.shields.io/badge/REST%20API-Pure-purple)](https://cloud.google.com/vertex-ai/docs/reference/rest)
 
 Read our announcement blog post at:
@@ -209,7 +209,7 @@ await createAIJob("Say 'Welcome to FireGen' in a cheerful voice");
 ✅ **Firebase Realtime Database** enabled
 ✅ **Cloud Storage** bucket configured
 ✅ **Vertex AI API** enabled in Google Cloud
-✅ **Node.js 22** installed
+✅ **Node.js 20** installed
 
 ### Installation
 
@@ -635,11 +635,11 @@ See [POSTINSTALL.md](./extension/POSTINSTALL.md#troubleshooting) for detailed st
 
 ## License
 
-[Your License Here]
+Apache-2.0
 
 ## Support
 
-- **Issues:** [GitHub Issues](your-repo-link)
+- **Issues:** [GitHub Issues](https://github.com/shipfail/firegen/issues)
 - **Documentation:** [Firebase Functions Docs](https://firebase.google.com/docs/functions)
 - **Vertex AI:** [Vertex AI Docs](https://cloud.google.com/vertex-ai/docs)
 
@@ -650,4 +650,4 @@ See [POSTINSTALL.md](./extension/POSTINSTALL.md#troubleshooting) for detailed st
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details
+This project is licensed under the Apache-2.0 License. See the [LICENSE](LICENSE) file for details

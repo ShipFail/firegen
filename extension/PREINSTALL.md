@@ -30,7 +30,7 @@ To install an extension, your project must be on the [Blaze (pay as you go) plan
 
 This extension uses other Firebase and Google Cloud Platform services, which have associated charges if you exceed the service's no-cost tier:
 
-- Cloud Functions (Node.js 22 runtime. [See FAQs](https://firebase.google.com/support/faq#extensions-pricing))
+- Cloud Functions (Node.js 20 runtime. [See FAQs](https://firebase.google.com/support/faq#extensions-pricing))
 - Firebase Realtime Database
 - Cloud Storage
 - Cloud Tasks (async operation polling)

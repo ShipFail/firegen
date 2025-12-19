@@ -17,7 +17,7 @@ version: 0.3.2
 specVersion: v1beta
 icon: icon.png
 
-displayName: FireGen – turns RTDB into your universal Generative AI API
+displayName: FireGen - AI Media Generator
 description: >
   Listens for job requests in Realtime Database and generates videos, images, audio, or text using
   Vertex AI models (Veo, Imagen, Gemini, Chirp, Lyria). Supports AI-assisted mode (natural language)
@@ -28,6 +28,7 @@ sourceUrl: https://github.com/shipfail/firegen   # public, verifiable source
 
 author:
   authorName: Huan Li
+  email: huan@chatie.io
   url: https://github.com/huan
 
 tags:
@@ -102,6 +103,10 @@ resources:
     properties:
       runtime: nodejs20
       taskQueueTrigger: {}
+
+externalServices:
+  - name: Vertex AI REST API
+    url: https://{REGION}-aiplatform.googleapis.com/v1beta1/
 
 # No configurable parameters - extension uses hard-coded values:
 # - Database instance: ${DATABASE_INSTANCE} (default Firebase RTDB instance)

@@ -68,7 +68,6 @@ The AI analyzer will:
 For production workflows with precise control:
 
 ```javascript
-```javascript
 const db = getDatabase();
 
 // Video generation
