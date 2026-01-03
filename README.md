@@ -11,6 +11,7 @@ FireGen is the one extension that routes prompts to every frontier model from Fi
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue)](https://www.typescriptlang.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-20-green)](https://nodejs.org/)
 [![REST API](https://img.shields.io/badge/REST%20API-Pure-purple)](https://cloud.google.com/vertex-ai/docs/reference/rest)
+[![Install Extension](https://img.shields.io/badge/Firebase-Install%20Extension-FFCA28?logo=firebase)](https://extensions.dev/extensions/huan/firegen)
 
 Read our announcement blog post at:
 - 🔥 [Announcing FireGen: Turn Firebase RTDB into Your Universal Generative AI API](https://wechaty.js.org/2025/11/13/firegen-firebase-rtdb-genai-api/)
@@ -125,6 +126,22 @@ FireGen isn't a thin API layer—it's a **complete job orchestration system** wi
 
 ## Quick Start
 
+### Install the Extension
+
+The easiest way to get started with FireGen is to install it as a Firebase Extension:
+
+**[🔥 Install FireGen Extension](https://extensions.dev/extensions/huan/firegen)**
+
+This will guide you through:
+- Setting up required Firebase services (Realtime Database, Cloud Storage)
+- Enabling Vertex AI API
+- Configuring IAM permissions automatically
+- Deploying Cloud Functions
+
+Alternatively, you can [install from source](#installation) for local development.
+
+---
+
 ### Two Ways to Use FireGen
 
 FireGen supports **two modes** for creating jobs:
@@ -212,6 +229,22 @@ await createAIJob("Say 'Welcome to FireGen' in a cheerful voice");
 ✅ **Node.js 20** installed
 
 ### Installation
+
+#### Option 1: Install via Firebase Extensions Marketplace (Recommended)
+
+The fastest way to install FireGen:
+
+**[🔥 Install FireGen Extension](https://extensions.dev/extensions/huan/firegen)**
+
+This automatically handles:
+- ✅ Vertex AI API enablement
+- ✅ IAM permission configuration
+- ✅ Cloud Functions deployment
+- ✅ Service account setup
+
+#### Option 2: Install from Source (For Development)
+
+For local development or customization:
 
 ```bash
 # Clone repository
