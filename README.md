@@ -13,6 +13,14 @@ FireGen is the one extension that routes prompts to every frontier model from Fi
 [![REST API](https://img.shields.io/badge/REST%20API-Pure-purple)](https://cloud.google.com/vertex-ai/docs/reference/rest)
 [![Install Extension](https://img.shields.io/badge/Firebase-Install%20Extension-FFCA28?logo=firebase)](https://extensions.dev/extensions/huan/firegen)
 
+## 🚀 Quick Install
+
+**[Install FireGen Extension →](https://extensions.dev/extensions/huan/firegen)**
+
+Add FireGen to your Firebase project in minutes. No SDK configuration, no model guessing, no infrastructure setup.
+
+---
+
 Read our announcement blog post at:
 - 🔥 [Announcing FireGen: Turn Firebase RTDB into Your Universal Generative AI API](https://wechaty.js.org/2025/11/13/firegen-firebase-rtdb-genai-api/)
 
