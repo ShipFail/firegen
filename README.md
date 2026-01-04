@@ -22,7 +22,7 @@ Add FireGen to your Firebase project in minutes. No SDK configuration, no model 
 ---
 
 Read our announcement blog post at:
-- 🔥 [Announcing FireGen: Turn Firebase RTDB into Your Universal Generative AI API](https://wechaty.js.org/2025/11/13/firegen-firebase-rtdb-genai-api/)
+- 🔥 [Announcing FireGen: Turn Firebase RTDB into Your Universal Generative AI API](https://ship.fail/blog/2025/11/13/firegen-firebase-rtdb-genai-api/)
 
 ## The Problem
 
